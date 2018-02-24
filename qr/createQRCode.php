@@ -8,7 +8,7 @@
  *  Description : Create a QR code using Chatfuel plugin json api 
  *  
  * This file is subject to the terms and conditions defined in
- * file 'LICENSE.txt', which is part of this source code package.
+ * file 'LICENSE', which is part of this source code package.
  *
 *********************************************/
 
