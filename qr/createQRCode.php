@@ -1,7 +1,8 @@
 <?php
 /*********************************************
  *  API doc :http://goqr.me/api/doc/create-qr-code/
- *  Author : Aziri
+ *  Author : Aziri 
+ *          @ m.me/mohdaziri
  *  Written: 20/2/2018
  *  Last updated:  -
  *
