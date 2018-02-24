@@ -1,7 +1,24 @@
 <?php
-
+/*********************************************
+ *  API doc :https://translate.yandex.com/developers
+ *  Author : Aziri 
+ *          @ m.me/mohdaziri
+ *  Written: 24/2/2018
+ *  Last updated:  -
+ *
+ *  Description : Translate word to selected language  
+ *  
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE', which is part of this source code package.
+ *
+*********************************************/
+//chatfuel JSON API plugin : user attribute {{text}}
 $text=$_GET[text];
+
+//language that user input
 $lang=$_GET[lang];
+
+//get API key from Yandex website
 $key='put_your_yandex_translate_key_here';
 
 //API url
@@ -11,6 +28,7 @@ $jsondata=file_get_contents($url);
 $dataJ = json_decode($jsondata);
 $translateWord= $dataJ->text[0];
 
+//output
 echo '{
   "messages": [
     {
