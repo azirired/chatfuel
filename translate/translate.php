@@ -15,7 +15,7 @@
 //chatfuel JSON API plugin : user attribute {{text}}
 $text=$_GET[text];
 
-//language that user input
+//language to translate : user attribute {{lang}}
 $lang=$_GET[lang];
 
 //get API key from Yandex website
