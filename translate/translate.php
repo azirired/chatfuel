@@ -1,17 +1,20 @@
 <?php
 
-$text1=$_GET[text];
+$text=$_GET[text];
 $lang=$_GET[lang];
-$user=$_GET[id];
+$key='put_your_yandex_translate_key_here';
 
-$jsondata=file_get_contents('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20180221T153827Z.9c86681bc1cd6fa3.342b83fa0f45353f7c9a31fd0e6993f24efe453d&text='. str_replace(" ", "%20", $text1).'&lang='.$lang.'');
+//API url
+$url='https://translate.yandex.net/api/v1.5/tr.json/translate?key='.$key.'&text='. str_replace(" ", "%20", $text).'&lang='.$lang.'');
+
+$jsondata=file_get_contents($url);
 $dataJ = json_decode($jsondata);
-$abc= $dataJ->text[0];
+$translateWord= $dataJ->text[0];
 
 echo '{
   "messages": [
     {
-      "text":  "Translation :\n'.$abc.'",
+      "text":  "Translation :\n'.$translateWord.'",
       "quick_replies": [
         {
           "title":"Translate again",
@@ -19,11 +22,7 @@ echo '{
         },
         {
           "title":"Menu",
-          "block_names": ["mainMenu More1"]
-        },
-        {
-          "title":"Loved it!",
-          "block_names": ["dmMe"]
+          "block_names": ["menu"]
         }
       ]
     }
