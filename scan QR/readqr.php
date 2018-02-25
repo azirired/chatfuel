@@ -1,7 +1,7 @@
 <?php
 /*********************************************
  *  Description : Scan/read QR code using fb chatbot   
- *  API doc :https://translate.yandex.com/developers
+ *  API doc : http://goqr.me/api/doc/read-qr-code/
  *  Author : Aziri 
  *          @ m.me/mohdaziri
  *  Written: 22/2/2018
