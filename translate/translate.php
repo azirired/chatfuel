@@ -17,6 +17,7 @@ $text=$_GET[text];
 
 //language to translate : user attribute {{lang}}
 $lang=$_GET[lang];
+$lang=strtolower($lang); //make sure language code in lowercase
 
 //get API key from Yandex website
 $key='put_your_yandex_translate_key_here';
