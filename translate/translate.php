@@ -31,22 +31,12 @@ $translateWord= $dataJ->text[0];
 
 //output
 echo '{
-  "messages": [
-    {
-      "text":  "Translation :\n'.$translateWord.'",
-      "quick_replies": [
-        {
-          "title":"Translate again",
-          "block_names": ["translate"]
-        },
-        {
-          "title":"Menu",
-          "block_names": ["menu"]
-        }
-      ]
-    }
-  ]
+ "messages": [
+   {"text": "Translation :\n'.$translateWord.'",
+   {"text": "dev by Aziri"}
+ ]
 }';
+
 
 ?>
 
