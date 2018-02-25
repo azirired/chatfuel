@@ -1,4 +1,16 @@
 <?php
+/*********************************************
+ *  Description : Scan/read QR code using fb chatbot   
+ *  API doc :https://translate.yandex.com/developers
+ *  Author : Aziri 
+ *          @ m.me/mohdaziri
+ *  Written: 22/2/2018
+ *  Last updated:  -
+ * 
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE', which is part of this source code package.
+ *
+*********************************************/
 
 //QR code scan by user
 $data=$_GET[pic];
