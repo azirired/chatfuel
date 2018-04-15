@@ -23,7 +23,7 @@ $lang=strtolower($lang); //make sure language code in lowercase
 $key='put_your_yandex_translate_key_here';
 
 //API url
-$url='https://translate.yandex.net/api/v1.5/tr.json/translate?key='.$key.'&text='. str_replace(" ", "%20", $text).'&lang='.$lang.'');
+$url='https://translate.yandex.net/api/v1.5/tr.json/translate?key='.$key.'&text='. str_replace(" ", "%20", $text).'&lang='.$lang;
 
 $jsondata=file_get_contents($url);
 $dataJ = json_decode($jsondata);
