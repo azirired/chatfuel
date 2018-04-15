@@ -12,6 +12,7 @@
  * file 'LICENSE', which is part of this source code package.
  *
 *********************************************/
+
 //chatfuel JSON API plugin : user attribute {{text}}
 $text=$_GET[text];
 
@@ -24,11 +25,9 @@ $key='put_your_yandex_translate_key_here';
 
 //API url
 $url='https://translate.yandex.net/api/v1.5/tr.json/translate?key='.$key.'&text='. str_replace(" ", "%20", $text).'&lang='.$lang;
-
 $jsondata=file_get_contents($url);
 $dataJ = json_decode($jsondata);
 $translateWord= $dataJ->text[0];
-
 //output
 echo '{
  "messages": [
@@ -36,8 +35,4 @@ echo '{
    {"text": "dev by Aziri"}
  ]
 }';
-
-
 ?>
-
-
