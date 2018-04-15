@@ -4,7 +4,7 @@
  *  Author : Aziri 
  *          @ m.me/mohdaziri
  *  Written: 24/2/2018
- *  Last updated:  -
+ *  Last updated:  15/04/2018
  *
  *  Description : Translate word to selected language  
  *  
