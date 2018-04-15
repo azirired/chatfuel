@@ -1,3 +1,4 @@
+
 <?php
 /*********************************************
  *  Description : Scan/read QR code using fb chatbot   
@@ -5,13 +6,12 @@
  *  Author : Aziri 
  *          @ m.me/mohdaziri
  *  Written: 22/2/2018
- *  Last updated:  -
+ *  Last updated:  15/04/2018
  * 
  * This file is subject to the terms and conditions defined in
  * file 'LICENSE', which is part of this source code package.
  *
 *********************************************/
-
 //QR code scan by user
 $data=$_GET[pic];
 
@@ -29,8 +29,10 @@ $fp = fopen($picFilename, "w");
 fwrite($fp, $content);
 fclose($fp);
 
+$fileurl='url_that_you_save_the_qrcode_image'; 
+
 //QR API url
-$url='http://api.qrserver.com/v1/read-qr-code/?fileurl=http://replace_with_url_for_your_image/'.$picFilename';
+$url='http://api.qrserver.com/v1/read-qr-code/?fileurl='.$fileurl.'/'.$picFilename;
 
 //Read QR code submitted by user. Use qrserver API
 $jsondata=file_get_contents($url);
@@ -40,32 +42,14 @@ $dataJ = json_decode($jsondata);
 $dataJ= $dataJ[0]->symbol[0]->data;
 
 //send response json to chatfuel
-/*
 echo '
 {
   "messages": [ 
     {"text": "QR Code content : '.$dataJ.'"},
-    {"text": "Take a QR code picture to scan again"}
+    {"text": "dev by Aziri"}
   ]
 }';
-*/
-
-echo '{
-  "messages": [
-    {
-      "text":  "QR Code content : \n'.$dataJ.'",
-      "quick_replies": [
-        {
-          "title":"Scan again",
-          "block_names": ["readQR"]
-        }
-      ]
-    }
-  ]
-}';
-
 
 //delete picture of QR code which is save to server
 unlink($picFilename);
-
 ?>
