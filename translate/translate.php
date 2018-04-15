@@ -32,7 +32,7 @@ $translateWord= $dataJ->text[0];
 //output
 echo '{
  "messages": [
-   {"text": "Translation :\n'.$translateWord.'",
+   {"text": "Translation :\n'.$translateWord.'"},
    {"text": "dev by Aziri"}
  ]
 }';
