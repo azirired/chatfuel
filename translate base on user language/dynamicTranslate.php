@@ -1,4 +1,17 @@
 <?php
+/*********************************************
+ *  Description : Detect language from chat bot and Translate reply message to detected language using Yandex Translate API   
+ *  API doc : https://tech.yandex.com/translate/doc/dg/reference/detect-docpage/
+              https://tech.yandex.com/translate/doc/dg/reference/translate-docpage/
+ *  Author : Aziri 
+ *          @ m.me/mohdaziri
+ *  Written: 19/5/2018
+ *  Last updated:  -
+ * 
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE', which is part of this source code package.
+ *
+*********************************************/
 
 //Yandex translation API key 
 $key='PUT_API_HERE';
