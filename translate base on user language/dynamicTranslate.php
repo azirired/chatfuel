@@ -14,8 +14,7 @@
 *********************************************/
 
 //Yandex translation API key 
-$key='PUT_API_HERE';
-
+$key='PUT_API_KEY_HERE';
 
 //get the language from user input. Attribute {{userInput}}
 $userInput=$_GET['text'];
@@ -33,7 +32,7 @@ $lang=$jlang->lang;
 //text to reply to user
 $text='Hi, How are you today? My name is Boopy Bot. How can I help you?';
 
-//translate bot text to customer language
+//translate text according to customer language
 $url='https://translate.yandex.net/api/v1.5/tr.json/translate?key='.$key.'&text='. str_replace(" ", "%20", $text).'&lang='.$lang;
 
 //get JSON content
